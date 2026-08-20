@@ -8,8 +8,15 @@
                 <!-- Dashboard -->
                 <x-layouts.sidebar-link href="{{ route('dashboard') }}" icon='fas-house'
                     :active="request()->routeIs('dashboard*')">Dashboard</x-layouts.sidebar-link>
-                <x-layouts.sidebar-link href="#" icon='fas-users'
+                <x-layouts.sidebar-link href="{{ route('users.index') }}" icon='fas-users'
                         :active="request()->routeIs('users*')">Users</x-layouts.sidebar-link>
+                <x-layouts.sidebar-link href="{{ route('posts.index') }}" icon='fas-file-signature'
+                        :active="request()->routeIs('posts*')">Posts</x-layouts.sidebar-link>
+                <x-layouts.sidebar-link href="{{ route('roles.index') }}" icon='fas-user-cog'
+                        :active="request()->routeIs('roles*')">Roles</x-layouts.sidebar-link>
+                <x-layouts.sidebar-link href="{{ route('permissions.index') }}" icon='fas-shield-halved'
+                        :active="request()->routeIs('permissions*')">Permissions</x-layouts.sidebar-link>
+
             </ul>
         </nav>
     </div>
